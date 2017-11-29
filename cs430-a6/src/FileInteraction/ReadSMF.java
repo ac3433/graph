@@ -44,9 +44,9 @@ public class ReadSMF extends ReadFile {
 						{
 							Vertex v = new ThirdDimension();
 							
-							v.setValuePosition(0, Float.parseFloat((value[1])));
-							v.setValuePosition(1, Float.parseFloat((value[2])));
-							v.setValuePosition(2, Float.parseFloat((value[3])));
+							v.setValuePosition(0, Double.parseDouble((value[1])));
+							v.setValuePosition(1, Double.parseDouble((value[2])));
+							v.setValuePosition(2, Double.parseDouble((value[3])));
 							
 							vertex.add(v);
 						}

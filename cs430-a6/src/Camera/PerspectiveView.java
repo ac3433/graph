@@ -4,9 +4,9 @@ import Matrix.Matrix;
 
 public class PerspectiveView extends AbstractCameraType {
 	
-	public PerspectiveView(float x, float y, float z, float d)
+	public PerspectiveView(double x, double y, double z, double d)
 	{
-		float[][] perps = new float[][]
+		double[][] perps = new double[][]
 		{
 			{x/(z/d)},
 			{y/(z/d)},

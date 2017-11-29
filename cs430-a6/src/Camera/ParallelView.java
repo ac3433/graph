@@ -5,7 +5,7 @@ import Matrix.Matrix;
 public class ParallelView extends AbstractCameraType{
 
 	public ParallelView() {
-		float[][] orth = new float[][]
+		double[][] orth = new double[][]
 			{{1,0,0,0},
 			 {0,1,0,0},
 			 {0,0,0,0},

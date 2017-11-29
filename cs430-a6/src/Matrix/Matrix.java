@@ -10,16 +10,16 @@ public class Matrix {
 	private int m; //row
 	private int n; //column
 	
-	private float[][] data;
+	private double[][] data;
 	
 	public Matrix(int m, int n)
 	{
 		this.m = m;
 		this.n = n;
-		data = new float[m][n];
+		data = new double[m][n];
 	}
 	
-	public Matrix(float[][] data)
+	public Matrix(double[][] data)
 	{
 		m = data.length;
 		n = data[0].length;
@@ -42,7 +42,7 @@ public class Matrix {
 	
 	public int getM() { return m;}
 	public int getN() { return n;}
-	public float[][] getData() { return data; }
+	public double[][] getData() { return data; }
 	
 	public Matrix convertToHomogenous()
 	{
@@ -57,7 +57,7 @@ public class Matrix {
 		}		
 		return a;
 	}
-	
+		
 	public Matrix multiple(Matrix a)
 	{
 		Matrix b = this;
@@ -73,4 +73,11 @@ public class Matrix {
 		return c;
 	}
 	
+	public Matrix identity(int n)
+	{
+		Matrix A = new Matrix(n,n);
+		for(int i = 0; i < n; i++)
+			A.data[i][i] = 1;
+		return A;
+	}
 }

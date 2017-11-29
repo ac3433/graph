@@ -2,13 +2,13 @@ package Dimension;
 
 public abstract class Vertex {
 
-	protected float[] coordinate;
+	protected double[] coordinate;
 		
-	protected void setCoordinateSize(int size) { this.coordinate = new float[size]; }
+	protected void setCoordinateSize(int size) { this.coordinate = new double[size]; }
 	
 	public int getCoordinateSize() { return coordinate.length; }
 	
-	public float getValuePosition(int pos)
+	public double getValuePosition(int pos)
 	{
 		try
 		{
@@ -25,7 +25,7 @@ public abstract class Vertex {
 		return -1;
 	}
 	
-	public void setValuePosition(int pos, float value)
+	public void setValuePosition(int pos, double value)
 	{
 		try
 		{
