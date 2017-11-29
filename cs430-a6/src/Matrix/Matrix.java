@@ -1,4 +1,5 @@
 package Matrix;
+import Dimension.ThirdDimension;
 //to help solve matrix computation
 //used existing matrix class from 
 //https://introcs.cs.princeton.edu/java/95linear/Matrix.java.html
@@ -79,5 +80,20 @@ public class Matrix {
 		for(int i = 0; i < n; i++)
 			A.data[i][i] = 1;
 		return A;
+	}
+	
+	public ThirdDimension ConvertBackToPoints(Matrix a)
+	{
+		  ThirdDimension v = new ThirdDimension();
+		  
+		 double x = a.data[0][0];
+		 double y = a.data[1][0];
+		 double z = a.data[2][0];
+		 
+		 v.setValuePosition(0, x);
+		 v.setValuePosition(1, y);
+		 v.setValuePosition(2, z);
+		 
+		 return v;
 	}
 }

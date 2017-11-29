@@ -107,5 +107,18 @@ public class Transformation {
 		return new Matrix(s);
 	}
 	
+	public Matrix Scale(double vrpz, double uMax, double uMin, double vMax, double vMin, double nMax, double nMin)
+	{
+		double Sx = (2 * Math.abs(vrpz)) / ((uMax - uMin) * (vrpz + nMax));
+		double Sy = (2 * Math.abs(vrpz)) / ((vMax - vMin) * (vrpz + nMax));
+		double Sz = 1 / (vrpz + nMax);
+		
+		double[][] scale = {	{Sx, 0, 0, 0},
+								{0, Sy, 0, 0},
+								{0, 0, Sz, 0},
+								{0, 0, 0, 1}};
+		
+		return new Matrix(scale);
+	}
 	
 }
